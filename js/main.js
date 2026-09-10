@@ -232,4 +232,40 @@
       });
     });
   }
+
+  /* ---------- Careers board ---------- */
+  var board = document.querySelector("[data-careers]");
+  if (board) {
+    var jobItems = Array.prototype.slice.call(board.querySelectorAll(".careers__item"));
+    var jobPanels = Array.prototype.slice.call(board.querySelectorAll(".careers__panel"));
+
+    function selectJob(id, moveFocus) {
+      jobItems.forEach(function (it) {
+        var on = it.getAttribute("data-job") === id;
+        it.classList.toggle("is-active", on);
+        it.setAttribute("aria-current", on ? "true" : "false");
+      });
+      jobPanels.forEach(function (p) {
+        p.hidden = p.getAttribute("data-job") !== id;
+      });
+      var panel = board.querySelector('.careers__panel[data-job="' + id + '"]');
+      if (panel && moveFocus) {
+        var h = panel.querySelector("h2");
+        if (h) { h.setAttribute("tabindex", "-1"); h.focus({ preventScroll: true }); }
+      }
+      if (panel && moveFocus && window.matchMedia("(max-width: 820px)").matches) {
+        panel.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    jobItems.forEach(function (it) {
+      it.addEventListener("click", function () { selectJob(it.getAttribute("data-job"), true); });
+    });
+
+    // Deep link: careers.html#job-crew-leader
+    var wanted = (window.location.hash || "").replace(/^#job-/, "");
+    if (wanted && board.querySelector('.careers__item[data-job="' + wanted + '"]')) {
+      selectJob(wanted, false);
+    }
+  }
 })();
