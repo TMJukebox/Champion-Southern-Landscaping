@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact &amp; book work — Champion Southern Landscaping</title>
+  <meta name="description" content="Book a visit from Champion Southern Landscaping. Send a few details about your property or project and we'll get back to you with a free quote. Serving the Rio Grande Valley and Greater San Antonio." />
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=5" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M16 29C16 20 10 14 4 12c0 9 6 15 12 17Z" fill="#40916c"/>
+          <path d="M16 29c0-11 6-19 12-21 0 11-6 19-12 21Z" fill="#2d6a4f"/>
+          <path d="M16 29V15" stroke="#1b4332" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        Champion Southern Landscaping
+      </a>
+
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
+
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="is-active">Contact</a></li>
+        <li><a href="contact.html" class="btn">Get a free quote</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow" style="color:var(--green-300)">Contact</span>
+        <h1>Book work or ask a question</h1>
+        <p>Tell us about your property or project and what you'd like done. We'll get back to you within two working days with a free quote or a time to visit. Serving the Rio Grande Valley and Greater San Antonio.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <!-- ============ FORM ============ -->
+        <form class="form" id="booking-form" novalidate
+              action="https://formspree.io/f/your-form-id" method="POST">
+          <div class="field">
+            <label for="name">Your name <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" autocomplete="name" required />
+            <p class="field__error" data-error-for="name">Please enter your name.</p>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" required />
+              <p class="field__error" data-error-for="email">Please enter a valid email address.</p>
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" />
+              <p class="field__error" data-error-for="phone">Please enter a valid phone number.</p>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="service">What do you need? <span class="req" aria-hidden="true">*</span></label>
+              <select id="service" name="service" required>
+                <option value="">Choose a service…</option>
+                <optgroup label="Maintenance">
+                  <option>Residential &amp; commercial maintenance</option>
+                  <option>Preventative maintenance</option>
+                  <option>Weed control</option>
+                  <option>Weed pulling</option>
+                </optgroup>
+                <optgroup label="Cleanup &amp; removal">
+                  <option>Leaf &amp; bed cleanup</option>
+                  <option>Trash pick-up &amp; junk removal</option>
+                  <option>Pressure washing</option>
+                </optgroup>
+                <optgroup label="Trees &amp; plants">
+                  <option>Tree trimming</option>
+                  <option>Plant installations</option>
+                  <option>Bed installation &amp; design</option>
+                  <option>Mulch</option>
+                </optgroup>
+                <optgroup label="Lawns &amp; turf">
+                  <option>Sod installation</option>
+                  <option>Aeration</option>
+                  <option>Top dressing</option>
+                </optgroup>
+                <optgroup label="Hardscaping &amp; masonry">
+                  <option>Hardscaping / zero-scaping</option>
+                  <option>Masonry</option>
+                  <option>Fire pits</option>
+                  <option>Concrete slabs</option>
+                </optgroup>
+                <optgroup label="Drainage &amp; irrigation">
+                  <option>French drains</option>
+                  <option>Irrigation repair</option>
+                </optgroup>
+                <option>Something else / not sure</option>
+              </select>
+              <p class="field__error" data-error-for="service">Please pick an option.</p>
+            </div>
+            <div class="field">
+              <label for="timing">Ideal timing</label>
+              <select id="timing" name="timing">
+                <option value="">No rush</option>
+                <option>As soon as possible</option>
+                <option>Within a month</option>
+                <option>1–3 months</option>
+                <option>Just planning ahead</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="property">Property type</label>
+              <select id="property" name="property">
+                <option value="">Select…</option>
+                <option>Residential</option>
+                <option>Commercial</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="location">Property ZIP or city</label>
+              <input type="text" id="location" name="location" autocomplete="postal-code" placeholder="e.g. 78209 or San Antonio" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="message">Tell us about the property or project <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" required placeholder="Rough size, what's there now, and what you'd like done…"></textarea>
+            <p class="field__error" data-error-for="message">Please add a few details so we can help.</p>
+          </div>
+
+          <button type="submit" class="btn" style="width:100%;justify-content:center">Send enquiry</button>
+          <p class="form__note">
+            No spam, ever. We'll only use your details to reply about your property.
+          </p>
+          <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <!-- ============ INFO ============ -->
+        <aside class="info-card">
+          <h3>Prefer to talk?</h3>
+          <p style="color:rgba(255,255,255,.85)">Call or email directly and you'll reach the team — not a call centre.</p>
+          <ul class="info-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1.2.4 2.4.8 3.5a2 2 0 0 1-.5 2.1L8.1 10.5a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c1.1.4 2.3.7 3.5.8a2 2 0 0 1 1.7 2Z"/></svg>
+              <span><strong>Phone</strong><a href="tel:+12107729013">(210) 772-9013</a></span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4zM4 6l8 6 8-6"/></svg>
+              <span><strong>Email</strong><a href="mailto:championsouthernlandscaping@gmail.com">championsouthernlandscaping@gmail.com</a></span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span><strong>Areas covered</strong><span>Rio Grande Valley &amp; Greater San Antonio</span></span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              <span><strong>Quotes</strong><span>Free and no-pressure — usually back to you within 2 working days</span></span>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>© <span data-year>2026</span> Champion Southern Landscaping · Serving the Rio Grande Valley &amp; Greater San Antonio</div>
+      <nav class="site-footer__links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="tel:+12107729013">(210) 772-9013</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=6"></script>
+</body>
+</html>
